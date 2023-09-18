@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Poppins&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  align-items: center;
+}
+
+.container{
+  width: 500px;
+  margin: auto auto;
+  background-color: #131e29;
+  padding: 20px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type="text"]:focus{
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(8, 51, 97);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.icon{
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+.fatrash{
+  margin-left: 15px;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+.todo-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(43, 91, 142);
+  padding: 0 15px;
+  border-radius: 5px;
+}
+.todo-name{
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+.todo-el {
+  flex-grow: 1; 
+  margin-right: 10px; 
+}
+
+li {
+  margin-bottom: 10px;
+}
+.icons {
+  display: flex; 
+}
+
+button {
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  .container{
+    width: 330px;
   }
-  to {
-    transform: rotate(360deg);
+  form {
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    width: 100%;
   }
 }
